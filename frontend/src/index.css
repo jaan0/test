@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    margin: 0;
-    font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 code {
     font-family:
         source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -73,12 +63,27 @@ code {
     }
 }
 
+/* Scroll-reveal split words (reference-like) */
+.textscroll_word {
+  position: relative;
+  display: inline-block;
+  will-change: opacity;
+  white-space: pre;
+}
+
 @layer base {
     * {
         @apply border-border;
     }
     body {
         @apply bg-background text-foreground;
+        margin: 0;
+        font-family:
+            -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+            "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+            sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 }
 

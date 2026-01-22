@@ -24,7 +24,20 @@ const HowItWorksSection = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      // Add offset for mobile devices, especially for contact section
+      const isMobile = window.innerWidth < 768;
+      // Calculate offset based on header height + some padding
+      const headerHeight = 80; // Approximate header height
+      const padding = isMobile ? 20 : 40;
+      const offset = headerHeight + padding;
+      
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = Math.max(0, elementPosition - offset);
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -32,14 +45,14 @@ const HowItWorksSection = () => {
     <section id="how-it-works" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/5 text-green-500 text-xs font-medium tracking-wider uppercase mb-6">
+        <div className="mb-12 sm:mb-16 px-2">
+          <span className="inline-block px-3 sm:px-4 py-1.5 rounded border border-green-500/30 bg-green-500/5 text-green-500 text-xs font-medium tracking-wider uppercase mb-4 sm:mb-6">
             How it works
           </span>
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <h2 className="text-5xl font-bold text-white mb-4">How we build your site</h2>
-              <p className="text-xl text-gray-400">Simple steps. Clear results.</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">How we build your site</h2>
+              <p className="text-base sm:text-lg md:text-xl text-gray-400">Simple steps. Clear results.</p>
             </div>
             <Button
               onClick={() => scrollToSection('contact')}

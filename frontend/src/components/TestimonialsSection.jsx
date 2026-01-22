@@ -83,14 +83,14 @@ const TestimonialsSection = () => {
     <section className="py-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="mb-16 text-center">
-          <span className="inline-block px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/5 text-green-500 text-xs font-medium tracking-wider uppercase mb-6">
+        <div className="mb-12 sm:mb-16 text-center px-2">
+          <span className="inline-block px-3 sm:px-4 py-1.5 rounded border border-green-500/30 bg-green-500/5 text-green-500 text-xs font-medium tracking-wider uppercase mb-4 sm:mb-6">
             Testimonials
           </span>
-          <h2 className="text-5xl font-bold text-white mb-4">
-            Trusted by teams <br />that move fast
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
+            Trusted by teams <br className="hidden sm:block" />that move fast
           </h2>
-          <p className="text-xl text-gray-400">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400">
             Businesses trust our development services to keep site stable as they grow.
           </p>
         </div>

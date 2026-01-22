@@ -4,7 +4,6 @@ import HeroSection from '../components/HeroSection';
 import LogoMarquee from '../components/LogoMarquee';
 import StatementSection from '../components/StatementSection';
 import FeaturesSection from '../components/FeaturesSection';
-import CapabilitiesSection from '../components/CapabilitiesSection';
 import HowItWorksSection from '../components/HowItWorksSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import WebDevServices from '../components/WebDevServices';
@@ -20,10 +19,9 @@ const Home = () => {
       <LogoMarquee />
       <StatementSection />
       <FeaturesSection />
-      <CapabilitiesSection />
+      <WebDevServices />
       <HowItWorksSection />
       <TestimonialsSection />
-      <WebDevServices />
       <CTASection />
       <ContactSection />
       <Footer />

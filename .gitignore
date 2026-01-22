@@ -21,7 +21,11 @@ node_modules/
 
 # Next.js
 /.next/
+/test/frontend/.next/
+**/.next/
 /out/
+**/*.hot-update.*
+**/*.pack.gz
 next-env.d.ts
 *.tsbuildinfo
 
@@ -31,7 +35,9 @@ dist/
 dist
 
 # Environment files (comprehensive coverage)
-
+.env
+.env.*
+!.env.example
 *token.json*
 *credentials.json*
 
